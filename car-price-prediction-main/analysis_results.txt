@@ -1,0 +1,115 @@
+Pearson correlation:
+               Price      year  kms_driven
+Price       1.000000  0.347764   -0.149621
+year        0.347764  1.000000   -0.233699
+kms_driven -0.149621 -0.233699    1.000000
+
+Spearman correlation:
+               Price      year  kms_driven
+Price       1.000000  0.538583   -0.252938
+year        0.538583  1.000000   -0.362970
+kms_driven -0.252938 -0.362970    1.000000
+
+ANOVA results for Price by company_grouped:
+                       df        sum_sq       mean_sq          F        PR(>F)
+C(company_grouped)    9.0  3.012520e+13  3.347244e+12  30.480654  5.338776e-46
+Residual            805.0  8.840136e+13  1.098154e+11        NaN           NaN
+
+Eta-squared = 0.254 (0.01 small, 0.06 medium, 0.14 large)
+
+Levene test (homogeneity of variances): stat=30.476, p=0.0000
+Shapiro-Wilk on residuals: stat=0.866, p=0.0000 (p>0.05 => approx normal)
+
+Tukey HSD (company_grouped) summary:
+          Multiple Comparison of Means - Tukey HSD, FWER=0.05          
+=======================================================================
+  group1   group2    meandiff   p-adj     lower        upper     reject
+-----------------------------------------------------------------------
+Chevrolet     Ford  277714.6353 0.0293   14360.3916   541068.879   True
+Chevrolet    Honda   145547.652 0.5665  -80135.5646  371230.8685  False
+Chevrolet  Hyundai  116317.5195 0.7129  -84835.5263  317470.5652  False
+Chevrolet Mahindra  319943.5291 0.0001  110406.5193  529480.5389   True
+Chevrolet   Maruti   67752.2873 0.9837 -125927.7744   261432.349  False
+Chevrolet    Other  634633.4153    0.0  425913.7544  843353.0762   True
+Chevrolet  Renault   258427.008 0.0473    1510.8654  515343.1506   True
+Chevrolet     Tata   -1145.9724    1.0  -223667.422  221375.4772  False
+Chevrolet   Toyota  322359.0131 0.0021   70933.8555  573784.1707   True
+     Ford    Honda -132166.9833 0.7456 -367257.6687   102923.702  False
+     Ford  Hyundai -161397.1158 0.3156 -373050.7572   50256.5256  False
+     Ford Mahindra   42228.8938 0.9998 -177408.2492  261866.0368  False
+     Ford   Maruti  -209962.348 0.0388 -414526.9647   -5397.7313   True
+     Ford    Other    356918.78    0.0  138061.2625  575776.2975   True
+     Ford  Renault  -19287.6273    1.0 -284505.6893  245930.4348  False
+     Ford     Tata -278860.6077 0.0057 -510917.7378  -46803.4776   True
+     Ford   Toyota   44644.3778 0.9999 -215258.1539  304546.9095  False
+    Honda  Hyundai  -29230.1325 0.9999 -191633.0896  133172.8246  False
+    Honda Mahindra  174395.8771 0.0455    1717.1838  347074.5705   True
+    Honda   Maruti  -77795.3646  0.842 -230844.8303   75254.1011  False
+    Honda    Other  489085.7633    0.0  317399.8014  660771.7252   True
+    Honda  Renault  112879.3561 0.8615 -114976.0301  340734.7422  False
+    Honda     Tata -146693.6244 0.2849 -334916.8115   41529.5628  False
+    Honda   Toyota  176811.3611 0.2535  -44834.2626  398456.9849  False
+  Hyundai Mahindra  203626.0096 0.0002   64530.4859  342721.5334   True
+  Hyundai   Maruti  -48565.2321 0.9405 -162379.8733    65249.409  False
+  Hyundai    Other  518315.8958    0.0  380454.7226  656177.0691   True
+  Hyundai  Renault  142109.4886 0.4475  -61477.6195  345696.5966  False
+  Hyundai     Tata -117463.4919 0.3523 -275443.2429   40516.2592  False
+  Hyundai   Toyota  206041.4936 0.0313    9429.1438  402653.8434   True
+ Mahindra   Maruti -252191.2418    0.0 -380241.9474 -124140.5362   True
+ Mahindra    Other  314689.8862    0.0  164860.2704   464519.502   True
+ Mahindra  Renault  -61516.5211 0.9958 -273391.2984  150358.2562  False
+ Mahindra     Tata -321089.5015    0.0 -489614.9074 -152564.0956   True
+ Mahindra   Toyota     2415.484    1.0 -202766.4518  207597.4198  False
+   Maruti    Other   566881.128    0.0  440172.3217  693589.9342   True
+   Maruti  Renault  190674.7207 0.0649    -5532.132  386881.5734  False
+   Maruti     Tata  -68898.2597 0.9024 -217245.8928   79449.3733  False
+   Maruti   Toyota  254606.7257 0.0009   65646.8501  443566.6013   True
+    Other  Renault -376206.4073    0.0 -587272.8888 -165139.9258   True
+    Other     Tata -635779.3877    0.0 -803287.4496 -468271.3258   True
+    Other   Toyota -312274.4022 0.0001 -516621.5704  -107927.234   True
+  Renault     Tata -259572.9804 0.0099 -484297.1631  -34848.7978   True
+  Renault   Toyota   63932.0051 0.9986 -189444.7354  317308.7455  False
+     Tata   Toyota  323504.9855 0.0001  105079.5662  541930.4048   True
+-----------------------------------------------------------------------
+
+ANOVA results for Price by fuel_type:
+                 df        sum_sq       mean_sq          F        PR(>F)
+C(fuel_type)    2.0  5.589909e+12  2.794954e+12  20.095362  3.032537e-09
+Residual      812.0  1.129367e+14  1.390845e+11        NaN           NaN
+Tukey HSD (fuel_type) summary:
+       Multiple Comparison of Means - Tukey HSD, FWER=0.05        
+==================================================================
+group1 group2   meandiff   p-adj     lower        upper     reject
+------------------------------------------------------------------
+Diesel    LPG -284095.7403 0.5302 -904893.6226  336702.1421  False
+Diesel Petrol -164914.1725    0.0 -226422.3884 -103405.9566   True
+   LPG Petrol  119181.5678  0.894 -501455.1312  739818.2667  False
+------------------------------------------------------------------
+
+Contingency table (company_grouped x fuel_type):
+fuel_type        Diesel  LPG  Petrol
+company_grouped                     
+Chevrolet            21    0      13
+Ford                 19    0      11
+Honda                15    0      45
+Hyundai              27    0     112
+Mahindra             94    0       3
+Maruti               60    2     159
+Other                54    0      46
+Renault              25    0       8
+Tata                 50    0      15
+Toyota               20    0      16
+Chi-square: 233.80, p-value: 0.0000, dof: 18
+Expected counts:
+fuel_type            Diesel       LPG      Petrol
+company_grouped                                  
+Chevrolet         16.061350  0.083436   17.855215
+Ford              14.171779  0.073620   15.754601
+Honda             28.343558  0.147239   31.509202
+Hyundai           65.662577  0.341104   72.996319
+Mahindra          45.822086  0.238037   50.939877
+Maruti           104.398773  0.542331  116.058896
+Other             47.239264  0.245399   52.515337
+Renault           15.588957  0.080982   17.330061
+Tata              30.705521  0.159509   34.134969
+Toyota            17.006135  0.088344   18.905521
