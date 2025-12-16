@@ -16,22 +16,22 @@ The project contains a complete workflow from data cleaning and model training i
 
 ## ⚙️ Installation
 
-1. Clone the repository
--Clone the repository
--git clone https://github.com/<your-username>/car-price-prediction.git
--cd car-price-prediction
+1. **Clone the repository**
+ Clone the repository
+ git clone https://github.com/<your-username>/car-price-prediction.git
+ cd car-price-prediction
 
-2. (Optional) Create and activate a virtual environment
--python -m venv venv
--venv\Scripts\activate # Windows
--source venv/bin/activate # macOS / Linux
+2. **(Optional) Create and activate a virtual environment**
+ python -m venv venv
+ venv\Scripts\activate # Windows
+ source venv/bin/activate # macOS / Linux
 
-3. Install dependencies
--pip install -r requirements.txt
+3. **Install dependencies**
+ pip install -r requirements.txt
 
 ---
 
 ## 🖥️ Running the App
 
--streamlit run app.py
+ streamlit run app.py
 
